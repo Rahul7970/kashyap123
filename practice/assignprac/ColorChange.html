@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ColorChange</title>
+    <link rel="stylesheet" href="ColorChange.css">
+</head>
+
+<body>
+    <div id="container">
+        <div>
+            <h1>Registration Form</h1>
+        </div>
+
+        <div>
+            Username
+            <input type="text" name="username" placeholder="username" id="username"><br><br>
+        </div>
+
+        <div> FirstName
+            <input type="fname" name="fname" placeholder="Enter first name" id="firstName"><br><br>
+        </div>
+
+        <div>
+            LastName
+            <input type="lname" name="lname" placeholder="Enter last name" id="lastName"><br><br>
+        </div>
+
+        <div>
+            Password
+            <input type="password" name="password" placeholder="Enter password" id="password"><br><br>
+        </div>
+
+        <div>
+            Email
+            <input type="mail" name="Email" placeholder="Enter Email" id="Email"><br><br>
+        </div>
+
+        <div id="radiobtn">
+            Gender
+            <input type="radio" name="btn">Male
+            <input type="radio" name="btn">Female
+        </div>
+
+        <br>
+
+        <div>
+            <input type="radio">I accept Term and Condition
+        </div>
+
+        <div>
+            <label for="">Background Color</label>
+            <input type="color" name="bgcolor" id="color">
+
+            <input type="color" name="colortext" id="colortext">
+        </div>
+
+        <br>
+
+        <div>
+            <button type="button" onclick="saveuserdata()">submit</button>
+        </div>
+        <div>
+            <h2 id="Datavalue">Show the result</h2>
+        </div>
+    </div>
+    <script src="ColorChange.js"></script>
+
+</body>
+
+</html>

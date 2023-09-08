@@ -1,0 +1,43 @@
+ *{
+    overflow: hidden;
+}
+
+    
+body{
+    background-color: rgb(249, 249, 249);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+
+}
+.container{
+    background-image: linear-gradient(rgb(184, 52, 22), rgb(201, 201, 81));
+    padding: 50px;
+    text-align: center;
+}
+/* h1{
+    margin: 0px 0px 10px 0px ;
+    color:blue;
+}
+input{
+    width: 200px;
+    margin: 10px 0px;
+    padding: 10px;
+}
+
+ .btn{ 
+    width: 222px;
+    background-color: rgb(217, 235, 235);
+    border: 0px;
+    color: rgb(30, 137, 230);
+
+}  */
+ /* button[type="submit"]{
+    width: 222px;
+    background-color: rgb(23, 186, 186);
+    border: 0px;
+    color: rgb(30, 137, 230);
+
+}  */

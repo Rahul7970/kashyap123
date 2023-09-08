@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="all_text">
+    <h1 class="first_t">Hello</h1>
+    <span class="s_img"><img src="/quality.png"></span>
+    <span class="first_commit">free <i class="fa-sharp fa-solid fa-star"></i></span>
+    <h6>
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star"></i>
+      <i class="fa-solid fa-star-half-stroke"></i>
+    </h6>
+    <p class="first-p">Lorem ipsum dolor sit elit.</p>
+    <p class="sec_p">Lorem ipsum dolor sit amet.</p>
+    <h3 class="first_t1">Lorem, ipsum.</h3>
+    <p class="first_t2" id="video_editor">#video editor</p>
+    <h5>
+      <a href=""><i class="fa-solid fa-up-right-from-square"></i></a>
+      <a href=""><i class="fa-regular fa-bookmark"></i></a>
+    </h5>
+  </div>
+  
+  <input type="text" id="searchBox" placeholder="Search...">
+  <button onclick="searchVideoEditor()">Submit</button>
+  
+  <script>
+    function searchVideoEditor() {
+      var searchInput = document.getElementById("searchBox").value;
+      var videoEditor = document.getElementById("video_editor");
+      
+      if (searchInput.toLowerCase() === "video editor") {
+        videoEditor.style.display = "block";
+      } else {
+        videoEditor.style.display = "none";
+      }
+    }
+  </script>
+  
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Example</title>
+</head>
+<body>
+    <form id="dataForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name"><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email"><br><br>
+
+        <label for="phone">Phone:</label>
+        <input type="tel" id="phone" name="phone"><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <div id="output"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+  <title>Form with Local Storage</title>
+  <style>
+    input {
+      width: 200px;
+    }
+
+    button {
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <form action="" method="post">
+    <input type="text" name="name" placeholder="Name">
+    <input type="email" name="email" placeholder="Email">
+    <button type="submit">Submit</button>
+  </form>
+
+  <script>
+
+    let data = [];
+
+    function handleSubmit(event) {
+   
+      const name = event.target.name.value;
+      const email = event.target.email.value;
+
+      // Add the user input to the array
+      data.push({ name, email });
+
+      // Convert the array to a JSON string
+      const jsonData = JSON.stringify(data);
+
+      // Save the JSON string to local storage
+      localStorage.setItem("data", jsonData);
+
+      // Clear the form
+      event.target.reset();
+    }
+
+    // Attach the submit event listener to the form
+    document.querySelector("form").addEventListener("submit", handleSubmit);
+  </script>
+</body>
+</html> -->

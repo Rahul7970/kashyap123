@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+    <div class="container">
+        <form>
+            <div>
+                <marquee>  <h1>Registration form</h1></marquee>
+              
+            </div>
+
+            <span>usernmae</span>
+            <div>
+                <input type="text" name="username" placeholder="username" id="usernmae">
+            </div>
+
+            <span>emailid</span>
+            <div>
+                <input type="email" name="emailid" placeholder="emailid" id="Email">
+            </div>
+
+            <span>Mobile_no</span>
+            <div>
+                <input type="mobile" name="mobile" placeholder="mobile_no" id="Mobile">
+            </div>
+            
+            <span>password</span>
+            <div>
+                <input type="password" name="password" placeholder="password" id="password"><br><br>
+            </div>
+
+            <div class="btn">
+                <button type="button" onclick="saveformdata()" style="color: rgb(186, 0, 0); cursor: pointer;">submit</button>
+            </div>
+        </form>
+        <div>
+            <h2 id="datavalue">Show the result</h2>
+        </div>
+    </div>
+ 
+    <script src="form.js"></script>
+</body>
+</html>

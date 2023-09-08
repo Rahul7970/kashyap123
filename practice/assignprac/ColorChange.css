@@ -1,0 +1,20 @@
+/* *{
+    overflow: hidden;
+} */
+
+    
+body{
+    background-color: rgb(249, 249, 249);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 100vh; */
+
+
+}
+#container{
+    /* background: linear-gradient(rgb(226, 150, 133), rgb(84, 84, 23)); */
+    padding: 50px;
+    text-align: center;
+    border: 2px solid green;
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+</html><html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<style>
+    #form{
+        text-align: center;
+      background-color: aqua;
+      border: 3px double black;
+      width: 649px;
+    }
+    marquee{
+        
+    }
+    
+</style>
+<body>
+    <form action="" id="form">
+        <marquee behavior="Registration form" direction="direction">Registration form</marquee>
+        <!-- <h1>Registration form</h1> -->
+
+        <label for="firstName">firstName</label>
+        <input type="text" id="firstName" name="firstName"><br><br>
+
+        <label for="lastName">lastName</label>
+        <input type="text" id="lastName" name="lastName"><br><br>
+
+        <label for="mobileNo">mobileNo</label>
+        <input type="text" id="mobileNo" name="mobileNo"><br><br>
+
+        <label for="Email id">Email id</label>
+        <input type="text" id="Email" name="Email"><br><br>
+
+        <label for="Password">Password</label>
+        <input type="text" id="password" name="password" ><br><br>
+
+        <button type="button" onclick="formdata()">Submit</button>
+        <!-- <button type="button" onclick="getdataforlocalstorage()">Print</button> -->
+        
+    </form>
+<h1 id="ShowData"></h1>
+
+    <script src="form.js"></script>
+</body>
+</html>

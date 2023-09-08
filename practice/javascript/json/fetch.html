@@ -1,0 +1,117 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #movieDesc {
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Fetch json Data</h1>
+
+    <div class="row">
+        <div id="all_Movie">
+           
+        </div>
+    </div>
+    <h2 id="poster_image"></h2>
+
+    <script>
+        fetch("fetch.json")
+    .then(response => response.json())
+    .then(data => showdata(data))
+
+function showdata(data) {
+    for (let i = 0; i < data.moviedata.length; i++) {
+        console.log(data.moviedata[i]);
+        let movielist = data.moviedata[i];
+        document.getElementById("all_Movie").innerHTML +=
+            `  <div class="card mb-3 text-white bg-success border-danger" style="max-width: 540px;">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="${movielist["posterurl"]}" class="img-fluid rounded-start" alt="${movielist["title"]}">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h4 class="card-title">${movielist["title"]} <span style="color: blue;">${movielist["year"]}</span></h4>
+                            <p class="card-text" id="movieDesc">${movielist["storyline"]}</p>
+                            <button class="btn btn-primary">View Movie</button>
+                        </div>
+                    </div>
+                </div>
+            </div>`;
+    }
+}
+
+    </script>
+</body>
+
+</html> -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #movieDesc {
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Fetch json Data</h1>
+
+    <div class="row">
+        <div id="all_Movie">
+           
+        </div>
+    </div>
+    <h2 id="poster_image"></h2>
+
+    <script>
+        fetch("fetch.json")
+            .then(response => response.json())
+            .then(data => showdata(data))
+
+        function showdata(data) {
+            for (let i = 0; i < data.moviedata.length; i++) {
+                console.log(data.moviedata[i]);
+                let movielist = data.moviedata[i];
+                document.getElementById("all_Movie").innerHTML +=
+                    `  <div class="card mb-3 text-white bg-success border-danger" style="max-width: 540px;">
+                        <div class="row g-0">
+                            <div class="col-md-4">
+                                <img src="${movielist["posterurl"]}" class="img-fluid rounded-start" alt="${movielist["title"]}">
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h4 class="card-title">${movielist["title"]} <span style="color: blue;">${movielist["year"]}</span></h4>
+                                    <p class="card-text" id="movieDesc">${movielist["storyline"]}</p>
+                                    <button class="btn btn-primary">View Movie</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>`;
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+#container{
+
+}
+
+#cashOnDelevery{
+    
+}
+
+#content{
+    border: 1px solid rgb(223, 159, 95);
+    border-radius: 3px;
+    background: rgb(236, 216, 202);
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    margin-top: 10px;
+
+/* }
+
+#box{
+   
+
+    display: flex;
+} 
+.btn{
+    padding: 10px;
+    margin: 10px; */
+
+}
+/* #box.button{
+    background-color:	#ee6635 ;
+} */

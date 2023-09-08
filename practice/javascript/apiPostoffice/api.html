@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pincode Details</title>
+</head>
+<style>
+    #main {
+        border: 5px darkorange double;
+    }
+
+    h1 {
+        border: 2px rgb(66, 48, 25) double;
+        background-color: rgb(187, 247, 247);
+        text-align: center;
+    }
+
+    .card {
+        border: 1px solid #ccc;
+        padding: 10px;
+        margin: 10px;
+        width: 300px;
+        display: table-cell;
+
+    }
+
+    .card h2 {
+        margin-top: 0;
+
+
+    }
+</style>
+<body>
+
+    <div id="main">
+        <h1>Post_Office ApiData</h1>
+        <div id="cards-container"></div>
+    </div>
+    <script>
+
+        fetch('https://api.postalpincode.in/pincode/847121')
+            .then(response => response.json())
+            .then(data => {
+
+                data[0].PostOffice.forEach(postOffice => {
+                    const card = document.createElement('div');
+                    card.classList.add('card');
+                    const name = document.createElement('h2');
+                    name.textContent = postOffice.Name;
+                    const details = document.createElement('p');
+                    details.textContent = `District: ${postOffice.District}, State: ${postOffice.State}, Pincode: ${postOffice.Pincode}`;
+                    card.appendChild(name);
+                    card.appendChild(details);
+                    document.getElementById('cards-container').appendChild(card);
+                });
+            })
+            .catch(error => console.error(error));
+    </script>
+    
+</body>
+</html>
+

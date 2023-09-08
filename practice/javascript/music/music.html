@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <audio id="Audio">
+      
+        <source src="D:\traningb4\LivepureB4\Students\Rahul kumar\image\Duniya Me Sab Kuchh Kariha.mp3" type="audio/mpeg">
+        <source src="D:\traningb4\LivepureB4\Students\Rahul kumar\image\Dhani Ho Sab Dhan - Pawan Singh - Shivani Singh ! Bhojpuri Song.mp3" type="audio/mpeg">
+      </audio>
+      
+      <p>Click the buttons to play or pause the audio.</p>
+      
+      <button onclick="playAudio()" type="button">Play Audio</button>
+      <button onclick="pauseAudio()" type="button">Pause Audio</button> 
+      <button onclick="nextAudio()" type="button">next Audio</button> 
+      
+      <script>
+      var x = document.getElementById("Audio"); 
+      
+      function playAudio() { 
+        x.play(); 
+      } 
+      
+      function pauseAudio() { 
+        x.pause(); 
+      } 
+
+      function nextAudio() {
+        x.next();
+        
+      }
+      </script>
+      
+</body>
+</html>

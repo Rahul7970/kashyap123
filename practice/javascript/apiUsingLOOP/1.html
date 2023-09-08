@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .card {
+        border: 1px solid #ccc;
+        padding: 10px;
+        margin: 10px;
+        width: 300px;
+    }
+
+    .card h2 {
+        margin-top: 0;
+    }
+</style>
+
+<body>
+    <div id="cards-container"></div>
+
+    <script>
+        function createCards() {
+            fetch('https://api.postalpincode.in/pincode/637018')
+                .then(response => response.json())
+                .then(data => {
+                    const cards = [];
+                    for (let i = 0; i < data[0].PostOffice.length; i++) {
+                        const postOffice = data[0].PostOffice[i];
+                        const card = createCard(postOffice);
+                        cards.push(card);
+                    }
+                    const container = document.getElementById('cards-container');
+                    container.append(...cards);
+                })
+                .catch(error => console.error(error));
+        }
+
+        function createCard(postOffice) {
+            const card = document.createElement('div');
+            card.classList.add('card');
+
+            const name = document.createElement('h2');
+            name.textContent = postOffice.Name;
+            card.appendChild(name);
+
+            const details = document.createElement('p');
+            details.textContent = `District: ${postOffice.District}, State: ${postOffice.State}, Pincode: ${postOffice.Pincode}`;
+            card.appendChild(details);
+
+            return card;
+        }
+
+        window.onload = createCards;
+
+    </script>
+</body>
+
+</html>
